@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para FIORELLA</title>
+    <style>
+        body {
+            background-color: #000000; /* Fondo negro puro */
+            color: #ffffff; /* Texto blanco */
+            font-family: Helvetica, Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        h1 {
+            margin: 20px 0;
+        }
+        .video-container {
+            margin: 20px auto;
+            max-width: 560px;
+            height: auto;
+        }
+        iframe {
+            width: 100%;
+            height: 315px;
+        }
+        .step {
+            display: none; /* Ocultamos los pasos inicialmente */
+            margin: 20px 0;
+        }
+        .button {
+            background-color: #ff007f; /* Rosado oscuro */
+            color: #ffffff;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px auto;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .gift-container {
+            display: none; /* Ocultamos el regalo inicialmente */
+            margin: 20px 0;
+        }
+        .thank-you {
+            margin-top: 40px;
+            font-size: 18px;
+        }
+        .step.active {
+            display: block; /* Mostramos el paso cuando está activo */
+        }
+    </style>
+</head>
+<body>
+    <h1>Para FIORELLA</h1>
+    <p>Quise plasmar en este video todo aquello que las palabras a veces no se alcanza a expresar: la profundidad de mi amor y mi deseo constante de verte sonreír. Espero que en cada imagen, en cada detalle, sientas la dedicación y el cariño con los que he creado esto, solo para ti ❤️.</p>
+
+    <div class="video-container">
+        <iframe src="https://drive.google.com/file/d/1hRRrbutUyAfBfctu22vzi_0kEGIN4r-T/preview" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="steps">
+        <div class="step" id="step1">
+            <h2>Paso 1</h2>
+            <p>Desliza hacia abajo para descubrir algo especial.</p>
+        </div>
+        <div class="step" id="step2">
+            <h2>Paso 2</h2>
+            <p>¡Casi llegas! Sigue deslizando para el siguiente paso.</p>
+        </div>
+        <div class="step" id="step3">
+            <h2>Paso 3</h2>
+            <p>¡Estás muy cerca! Encuentra el regalo esperando por ti.</p>
+            <button class="button" onclick="openGift()">Este regalo es para ti</button>
+        </div>
+    </div>
+
+    <div class="gift-container" id="gift">
+        <!-- Reemplaza esta URL con el enlace directo a la imagen del conejo -->
+        <img src="https://image.cdn2.seaart.ai/2023-10-04/18987279128241157/0000215beec625046a4d997dcfc15d750b11234c_high.webp" alt="Conejo visual" style="max-width: 100%; height: auto;">
+        <p>Este es tu conejo visual, una pequeña promesa que pronto estará contigo. </p>
+    </div>
+
+    <div class="thank-you">
+        <p>Gracias por adentrarte en este video, desvelando el regalo que con tanto esmero he preparado para ti. Tú eres la razón de cada suspiro, la melodía que resuena en lo más profundo de mi alma. Eres mi musa, la inspiración que aviva mi corazón y el centro de mi universo, el ser más precioso que la vida me ha concedido.</p>
+        <p>TÚ ERES MI SUEÑO HECHO REALIDAD ❤️. </p>Con mucho amor, OMAR  
+    </div>
+
+    <script>
+        // Función para mostrar el regalo
+        function openGift() {
+            document.getElementById('gift').style.display = 'block';
+        }
+
+        // Función para mostrar los pasos a medida que se desplaza hacia abajo
+        window.addEventListener('scroll', function() {
+            const steps = document.querySelectorAll('.step');
+            const scrollPosition = window.scrollY + window.innerHeight;
+
+            steps.forEach(step => {
+                if (step.getBoundingClientRect().top < scrollPosition) {
+                    step.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
